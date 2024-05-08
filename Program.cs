@@ -59,5 +59,15 @@ void PrintArray(string result){
     Console.Write("]");
 }
 
-PrintArray(Three(CreateArray()));
+void main(){
+    Console.WriteLine("Enter some values. After print each value press 'Enter'");
+    Console.WriteLine("If you introdusted sufficent quantivalues values press 'Enter' whithout values!!!");
+    string array = CreateArray();
+    Console.WriteLine("Your values: "+array);
+    Console.Write("Your resul in if his data type an array: ");
+    PrintArray(Three(array));
+}
+
+main();
+
 
