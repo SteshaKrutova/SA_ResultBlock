@@ -9,7 +9,7 @@
 // [“Russia”, “Denmark”, “Kazan”] → []
 
 
-// функция формирует входную строку
+// function generates the entrance string from the introduced values
 string CreateArray() {
     string NewElevent = Console.ReadLine();
     string Array="";
@@ -21,7 +21,7 @@ string CreateArray() {
     return Array;
 }
 
-//функция преобразует строку в массив
+//function converts array to string 
 string[] StrToArray(string str){
     int len = LenRes(str);
 
@@ -56,7 +56,7 @@ string[] StrToArray(string str){
     return result;
 }
 
-//функция формирует выходную строку
+//function generates an output array (of three elements)
 string[] Three(string[] array){
     int len = 0;
     for (int i=0;i<array.GetLength(0);i++){
@@ -77,7 +77,7 @@ string[] Three(string[] array){
     return result;
 }
 
-//функция красиво печатает массив
+//function beautiful prints array
 void PrintArray(string[] result){
     int len = result.GetLength(0);
     Console.Write("[");
@@ -90,30 +90,18 @@ void PrintArray(string[] result){
     Console.Write("]");
 }
 
-//эта функция вызывет все остальные функции в нцжном порядке
+//function beautifuly calls all functions
  void main(){
+    Console.WriteLine("This program outputs all three-digit elements.");
     Console.WriteLine("Enter some values. After print each value press 'Enter'");
-    Console.WriteLine("Plese, don't use simbole '~'!!!");
-    Console.WriteLine("If you introdusted sufficent quantivalues values press 'Enter' whithout values!!!");
+    Console.WriteLine("!!!Plese, don't use simbole '~'!!!");
+    Console.WriteLine("If you introdusted sufficent quantivalues values press 'Enter' whithout values!");
     string str = CreateArray();
-    Console.Write("Your values: ");
+    Console.Write("Your array: ");
     PrintArray(StrToArray(str));
     Console.WriteLine();
-    Console.Write("Your resul in if his data type an array: ");
+    Console.Write("Your array the result: ");
     PrintArray(Three(StrToArray(str)));
  }
 
 main();
-
-//  void main(){
-//     Console.WriteLine("Enter some values. After print each value press 'Enter'");
-//     Console.WriteLine("If you introdusted sufficent quantivalues values press 'Enter' whithout values!!!");
-//     string str = CreateArray();
-//     Console.Write("Your values: ");
-//     string[] result = StrToArray(str);
-//     PrintArray(result);
-//     Console.WriteLine();
-//     Console.Write("Your resul in if his data type an array: ");
-//     string[] array =Three(result);
-//     PrintArray(array);
-//  }
